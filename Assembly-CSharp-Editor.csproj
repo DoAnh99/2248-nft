@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D704FC1F-9EDA-C776-00E4-BFCFE5AF93BA}</ProjectGuid>
+    <ProjectGuid>{F32E6DE8-21DF-D36F-73A7-E71B31DC9334}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -976,51 +976,51 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{550CC55D-49F7-5617-6F1F-C1EC03081B05}</Project>
+      <Project>{E59577B8-5FF2-F831-35E8-D773B0A3F7EF}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{19DA0E96-4E0C-0DF0-0DD1-FD1835B9DCE1}</Project>
+      <Project>{C4CCF4B3-9916-539B-E115-94BD500B3806}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{9F83B12C-C1DA-C9D6-F655-AF5ABC12B10A}</Project>
+      <Project>{92833FA7-00E4-5245-F447-3D8909FC3FB4}</Project>
       <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.csproj">
-      <Project>{A95BA2C2-1790-FAF1-A3A0-DBC4D00ACD20}</Project>
+      <Project>{A29E0ADC-8E3F-0766-EE4A-3641FC0A7E89}</Project>
       <Name>UniTask</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.Addressables.csproj">
-      <Project>{151A2330-F6E1-70C4-CC7F-44834A1B4F5D}</Project>
+      <Project>{1772A3D9-E034-C689-2AEA-C384F9FFDE11}</Project>
       <Name>UniTask.Addressables</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.DOTween.csproj">
-      <Project>{9CF3545F-8A91-5536-6C67-3B821A9F9C40}</Project>
+      <Project>{8BDB0E80-D185-95BD-3D9A-DB12F7E641F2}</Project>
       <Name>UniTask.DOTween</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.TextMeshPro.csproj">
-      <Project>{E764A292-399B-C186-CF22-4C9A73C77EB8}</Project>
+      <Project>{33846303-091F-0AA5-36B6-15F4152E3AFC}</Project>
       <Name>UniTask.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Solana.Unity.SDK.Editor.csproj">
-      <Project>{BB6E2B7A-DC99-ADFD-6342-BB137DBDF9DA}</Project>
+      <Project>{56864B03-A198-6C4F-380D-907A29C539E9}</Project>
       <Name>Solana.Unity.SDK.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="NativeFilePicker.Editor.csproj">
-      <Project>{089E1A6A-E3FB-7845-570C-B34EB8D3208F}</Project>
+      <Project>{280B4ADF-9578-293B-2F59-11DB8D9B7D81}</Project>
       <Name>NativeFilePicker.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityGifDecoder.csproj">
-      <Project>{40465E8B-F349-DCF9-4E88-324A65889028}</Project>
+      <Project>{F5FE5E7D-7F50-BD63-F4A3-8F4B688C72D2}</Project>
       <Name>UnityGifDecoder</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.Linq.csproj">
-      <Project>{01433E7B-C272-E90F-0D5F-6540EDECE46C}</Project>
+      <Project>{7ED9FAFE-A06E-5860-B9E4-E00F3810A4BE}</Project>
       <Name>UniTask.Linq</Name>
     </ProjectReference>
     <ProjectReference Include="com.solana.unity_sdk.csproj">
-      <Project>{1DB99556-A8F3-B6E1-C2E2-6FD7047B8797}</Project>
+      <Project>{62DDC26A-8476-F329-6392-76D8EF1ED9AA}</Project>
       <Name>com.solana.unity_sdk</Name>
     </ProjectReference>
   </ItemGroup>

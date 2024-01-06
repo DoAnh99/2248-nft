@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>Solana.Unity.SDK.Editor</RootNamespace>
-    <ProjectGuid>{BB6E2B7A-DC99-ADFD-6342-BB137DBDF9DA}</ProjectGuid>
+    <ProjectGuid>{56864B03-A198-6C4F-380D-907A29C539E9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Solana.Unity.SDK.Editor</AssemblyName>
@@ -845,7 +845,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="com.solana.unity_sdk.csproj">
-      <Project>{1DB99556-A8F3-B6E1-C2E2-6FD7047B8797}</Project>
+      <Project>{62DDC26A-8476-F329-6392-76D8EF1ED9AA}</Project>
       <Name>com.solana.unity_sdk</Name>
     </ProjectReference>
   </ItemGroup>

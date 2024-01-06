@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1DB99556-A8F3-B6E1-C2E2-6FD7047B8797}</ProjectGuid>
+    <ProjectGuid>{62DDC26A-8476-F329-6392-76D8EF1ED9AA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>com.solana.unity_sdk</AssemblyName>
@@ -882,11 +882,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UniTask.csproj">
-      <Project>{A95BA2C2-1790-FAF1-A3A0-DBC4D00ACD20}</Project>
+      <Project>{A29E0ADC-8E3F-0766-EE4A-3641FC0A7E89}</Project>
       <Name>UniTask</Name>
     </ProjectReference>
     <ProjectReference Include="UnityGifDecoder.csproj">
-      <Project>{40465E8B-F349-DCF9-4E88-324A65889028}</Project>
+      <Project>{F5FE5E7D-7F50-BD63-F4A3-8F4B688C72D2}</Project>
       <Name>UnityGifDecoder</Name>
     </ProjectReference>
   </ItemGroup>

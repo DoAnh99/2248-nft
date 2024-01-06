@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{40465E8B-F349-DCF9-4E88-324A65889028}</ProjectGuid>
+    <ProjectGuid>{F5FE5E7D-7F50-BD63-F4A3-8F4B688C72D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityGifDecoder</AssemblyName>
