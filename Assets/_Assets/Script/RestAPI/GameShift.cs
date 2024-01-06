@@ -127,13 +127,6 @@ public class GameShift : Singleton<GameShift>
         else
         {
 
-
-            // if 404  hien thong bao loi reload scene
-
-
-            //else// debug and go to game luoon  load scene
-            // Debug.Log("User" + EmailUser +  " registered successfully!");
-
             string jsonResponse = request.downloadHandler.text;
             var responseJson = UnityEngine.JsonUtility.FromJson<ApiResponse>(jsonResponse);
 

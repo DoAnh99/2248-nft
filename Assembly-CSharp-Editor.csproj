@@ -57,13 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DailyRewards\Editor\TimedRewardsEditor.cs" />
-    <Compile Include="Assets\DailyRewards\Editor\EditorTools.cs" />
-    <Compile Include="Assets\DailyRewards\Editor\DailyRewardsEditor.cs" />
-    <Compile Include="Assets\JSON\Editor\JSONObjectVectorTemplateTests.cs" />
     <Compile Include="Assets\JSON\Editor\JSONChecker.cs" />
-    <Compile Include="Assets\JSON\Editor\JSONObjectAsyncTests.cs" />
-    <Compile Include="Assets\JSON\Editor\JSONObjectTests.cs" />
     <Compile Include="Assets\JSON\Editor\JSONObjectTestStrings.cs" />
+    <Compile Include="Assets\JSON\Editor\JSONObjectAsyncTests.cs" />
+    <Compile Include="Assets\DailyRewards\Editor\EditorTools.cs" />
+    <Compile Include="Assets\JSON\Editor\JSONObjectVectorTemplateTests.cs" />
+    <Compile Include="Assets\JSON\Editor\JSONObjectTests.cs" />
+    <Compile Include="Assets\DailyRewards\Editor\DailyRewardsEditor.cs" />
     <Compile Include="Assets\JSON\Editor\JSONObjectEnumeratorTests.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -86,7 +86,26 @@ public class ShowPanelUnLockBlock : Singleton<ShowPanelUnLockBlock>
         if (highestBlock.idUnitBlock == 0 && highestBlock.valueBlock < 2048)
         {
             Debug.Log(" VALUE < 2048 ");
+
+            if (highestBlock.valueBlock == 1024)
+            {
+                Debug.Log("NEW BLOCK 1024 --------------------------------------------------------------");
+
+                APIHelper.Instance.CreateAssetUser1("Block" + highestBlock.valueBlock,
+               "https://i.imgur.com/4PVxP8C.png",
+               "Sale30",
+               UserNFT.referenceId);
+                PanelWinGame.SetActive(true);
+                winscript.Instance.SetAssetWin(0);
+            }
+
+
             ShowPanelUnlockBlock(highestBlock.idUnitBlock, highestBlock.valueBlock, highestBlock.idColor);
+            DOVirtual.DelayedCall(2.0f, () =>
+            {
+                PanelWinGame.SetActive(false);
+                //   SceneManager.LoadScene("Loading");
+            });
         }
 
 
@@ -100,34 +119,37 @@ public class ShowPanelUnLockBlock : Singleton<ShowPanelUnLockBlock>
         //////////////////////
         ///
 
-        else if (highestBlock.idUnitBlock == 0 && highestBlock.valueBlock >= 2048 && highestBlock.valueBlock < 10000)
+        else if (highestBlock.idUnitBlock == 0 && highestBlock.valueBlock == 2048)
 
 
 //        else if (highestBlock.idUnitBlock == 0 && highestBlock.valueBlock >= 2048 && highestBlock.valueBlock < 10000)
         {
             if (GameController.Instance.liminatedBlock.valueBlock == 1)
             {
-                //
+               
+                if (highestBlock.valueBlock == 2048)
+                {
+                    Debug.Log("NEW BLOCK 2048 --------------------------------------------------------------------------");
 
-                Debug.Log("NEW BLOCK 2048 ------------------------------");
-              
-                APIHelper.Instance.CreateAssetUser("newBlockUnLock",
-                    "https://i.imgur.com/5QNNHEC.png",
-                    "Block"+highestBlock.valueBlock,
-                    UserNFT.referenceId);
-                    PanelWinGame.SetActive(true);                
-                //
-                // showPanelWinGame
-                // Debug.Log("VALUEBLOCK EQUAL 2048");
+                    APIHelper.Instance.CreateAssetUser2("Block" + highestBlock.valueBlock,
+                   "https://i.imgur.com/UY0Mqxh.png",
+                   "Sale50",
+                   UserNFT.referenceId);
+                    PanelWinGame.SetActive(true);
+                    winscript.Instance.SetAssetWin(1);
+
+                }
+             
+                else { }
                 InstanceNewBlockEliminated(2, 0, 0);
 
                 ShowPanelUnlockBlock(highestBlock.idUnitBlock, highestBlock.valueBlock, highestBlock.idColor);
                 ShowPanelAddNewBlock(GameController.Instance.newBlockAdd.idUnitBlock, GameController.Instance.newBlockAdd.valueBlock, GameController.Instance.newBlockAdd.idColor);
                 ShowPanelBlockLiminated(GameController.Instance.liminatedBlock.idUnitBlock, GameController.Instance.liminatedBlock.valueBlock, GameController.Instance.liminatedBlock.idColor);
-                DOVirtual.DelayedCall(7.0f, () =>
+                DOVirtual.DelayedCall(2.0f, () =>
                     {
                         PanelWinGame.SetActive(false);
-                        SceneManager.LoadScene("Loading");
+                     //   SceneManager.LoadScene("Loading");
                     });
             }
             else
@@ -137,6 +159,79 @@ public class ShowPanelUnLockBlock : Singleton<ShowPanelUnLockBlock>
 
             }
         }
+
+        else if (highestBlock.idUnitBlock == 0 && highestBlock.valueBlock > 2048 && highestBlock.valueBlock < 10000)
+
+
+        //        else if (highestBlock.idUnitBlock == 0 && highestBlock.valueBlock >= 2048 && highestBlock.valueBlock < 10000)
+        {
+            if (GameController.Instance.liminatedBlock.valueBlock == 1)
+            {
+
+               
+                if (highestBlock.valueBlock == 4096)
+                {
+                    Debug.Log("NEW BLOCK 4096 ---------------------------------------------------------------------");
+
+                    APIHelper.Instance.CreateAssetUser3("Block" + highestBlock.valueBlock,
+                   "https://i.imgur.com/AUuCIdh.png",
+                   "Sale70",
+                   UserNFT.referenceId);
+                    PanelWinGame.SetActive(true);
+                    winscript.Instance.SetAssetWin(2);
+
+
+                }
+                else { }
+                InstanceNewBlockEliminated(2, 0, 0);
+
+                ShowPanelUnlockBlock(highestBlock.idUnitBlock, highestBlock.valueBlock, highestBlock.idColor);
+                ShowPanelAddNewBlock(GameController.Instance.newBlockAdd.idUnitBlock, GameController.Instance.newBlockAdd.valueBlock, GameController.Instance.newBlockAdd.idColor);
+                ShowPanelBlockLiminated(GameController.Instance.liminatedBlock.idUnitBlock, GameController.Instance.liminatedBlock.valueBlock, GameController.Instance.liminatedBlock.idColor);
+                DOVirtual.DelayedCall(2.0f, () =>
+                {
+                    PanelWinGame.SetActive(false);
+                    //   SceneManager.LoadScene("Loading");
+                });
+            }
+            if (GameController.Instance.liminatedBlock.valueBlock == 2)
+            {
+
+
+                if (highestBlock.valueBlock == 4096)
+                {
+                    Debug.Log("NEW BLOCK 4096 ---------------------------------------------------------------------");
+
+                    APIHelper.Instance.CreateAssetUser3("Block" + highestBlock.valueBlock,
+                   "https://i.imgur.com/AUuCIdh.png",
+                   "Sale70",
+                   UserNFT.referenceId);
+                    PanelWinGame.SetActive(true);
+                    winscript.Instance.SetAssetWin(2);
+
+
+                }
+                else { }
+            //    InstanceNewBlockEliminated(2, 0, 0);
+
+               ShowPanelUnlockBlock(highestBlock.idUnitBlock, highestBlock.valueBlock, highestBlock.idColor);
+              //  ShowPanelAddNewBlock(GameController.Instance.newBlockAdd.idUnitBlock, GameController.Instance.newBlockAdd.valueBlock, GameController.Instance.newBlockAdd.idColor);
+              //  ShowPanelBlockLiminated(GameController.Instance.liminatedBlock.idUnitBlock, GameController.Instance.liminatedBlock.valueBlock, GameController.Instance.liminatedBlock.idColor);
+                DOVirtual.DelayedCall(2.0f, () =>
+                {
+                    PanelWinGame.SetActive(false);
+                    //   SceneManager.LoadScene("Loading");
+                });
+            }
+            else
+            {
+                //show highest block
+                ShowPanelUnlockBlock(highestBlock.idUnitBlock, highestBlock.valueBlock, highestBlock.idColor);
+
+            }
+        }
+
+
         else if (highestBlock.idUnitBlock == 1 && highestBlock.valueBlock >= 16 && highestBlock.valueBlock < 131)
         {
             Debug.Log("VALUE FROM 16 K TO 131K ");

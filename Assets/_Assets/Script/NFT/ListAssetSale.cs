@@ -10,13 +10,15 @@ public class AssetUser
 {
     public string idAsset;
     public string nameAsset;
+    public string urlImgAsset;
 
 
     // public string imageUrl;
-    public AssetUser(string idAsset,string nameAsset)
+    public AssetUser(string idAsset,string nameAsset, string urlImgAsset)
     {
         this.idAsset= idAsset;  
         this.nameAsset = nameAsset;
+        this.urlImgAsset = urlImgAsset;
     }
 
 }
@@ -46,23 +48,47 @@ public class AssetUser
 public class ListAssetSale : Singleton<ListAssetSale>
 {
 
-    public Button Sale;
+ //   public Button Sale;
 
 
-    public TMP_InputField textInputPrice;
-    public GameObject ImageItem;
+  //  public TMP_InputField textInputPrice;
+  
 
     public List<AssetUser> ListAssetUser;
-   // public List<Text> ListTextName;
-    public Text textNameAsset;
-    public Text textLinkImage;
+    public List<Sprite> ListImgAsset;
+    // public List<Text> ListTextName;
+    public GameObject gameObjectNoasset;
+    public GameObject gameObjectasset1;
+    public GameObject gameObjectasset2;
+    public GameObject gameObjectasset3;
+
+    public Text textNameAsset1;
+    public Text textLinkImage1;
+    public Image ImageItem1;
+
+    public Text textNameAsset2;
+    public Text textLinkImage2;
+    public Image ImageItem2;
+    
+    public Text textNameAsset3;
+    public Text textLinkImage3;
+    public Image ImageItem3;
+
+
     private string apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiIwNTk4NGM5ZS02MTIzLTRhZWMtOGM2MC05MWM1NmE4YzEzNjgiLCJzdWIiOiI5NmZhNjlmYS0wOTlkLTRlNjctODNjNi0wYmIxZDUyYjM2ZDYiLCJpYXQiOjE3MDQyNjcwNjh9.ZiytZi2gOoFoKcLWRtbAna1FE0NPGzYk3H2G52c95y4";
     private string apiAssetsUrl = "https://api.gameshift.dev/assets";
 
     private void Start()
     {
-        ImageItem.SetActive(false);
-        Sale.onClick.AddListener(OnButtonSaleClick);
+        // ImageItem.SetActive(false);
+
+        gameObjectasset1.SetActive(false);
+        gameObjectasset2.SetActive(false);
+        gameObjectasset3.SetActive(false);
+        gameObjectNoasset.SetActive(false);
+     
+
+       // Sale.onClick.AddListener(OnButtonSaleClick);
     
         StartCoroutine(GetAssetList());
     }
@@ -98,7 +124,7 @@ public class ListAssetSale : Singleton<ListAssetSale>
                     {
                         Debug.Log("Asset ID: " + asset.id);
                         Debug.Log("Asset Name: " + asset.name);
-                        ListAssetUser.Add(new AssetUser(asset.id, asset.name));
+                        ListAssetUser.Add(new AssetUser(asset.id, asset.name,asset.description));//clear list
                     }
                 }
             }
@@ -106,29 +132,94 @@ public class ListAssetSale : Singleton<ListAssetSale>
         SetText();
     }
 
-    //  public void SetText()
-    //  {
-    //     for (int i = 0; i <ListAssetUser.Count; i++)
-    //     {
-    //        ListTextName.Add(ListAssetUser[i].nameAsset);
-    //        ListTextName[i].text = ListAssetUser[i].nameAsset;
-    // textNameAsset.text= ListAssetUser[0].nameAsset;
-    //    }
-    // }
+
     public void SetText()
     {
-        if (ListAssetUser.Count > 0)
-        { 
-          textNameAsset.text = ListAssetUser[0].nameAsset;
-          textLinkImage.text = "https://i.imgur.com/5QNNHEC.png";
-          ImageItem.SetActive(true);
+        if (ListAssetUser.Count == 0)
+        {
+            gameObjectNoasset.SetActive(true);
+
         }
+
+        else if (ListAssetUser.Count == 1)
+        {
+
+
+            gameObjectNoasset.SetActive(false);
+            gameObjectasset1.SetActive(true);
+            gameObjectasset2.SetActive(false);
+            gameObjectasset3.SetActive(false);
+
+            textNameAsset1.text = ListAssetUser[0].nameAsset;
+            textLinkImage1.text = ListAssetUser[0].urlImgAsset;
+            //  ImageItem.SetActive(true);
+            //   getindexsprite(ListAssetUser[0].nameAsset);
+            ImageItem1.sprite = ListImgAsset[getindexsprite(ListAssetUser[0].nameAsset)];
+
+        }
+        else if (ListAssetUser.Count == 2)
+        {
+            gameObjectNoasset.SetActive(false);
+            gameObjectasset1.SetActive(true);
+            gameObjectasset2.SetActive(true);
+            gameObjectasset3.SetActive(false);
+
+            textNameAsset1.text = ListAssetUser[0].nameAsset;
+            textLinkImage1.text = ListAssetUser[0].urlImgAsset;
+            ImageItem1.sprite = ListImgAsset[getindexsprite(ListAssetUser[0].nameAsset)];
+
+            textNameAsset2.text = ListAssetUser[1].nameAsset;
+            textLinkImage2.text = ListAssetUser[1].urlImgAsset;
+            ImageItem2.sprite = ListImgAsset[getindexsprite(ListAssetUser[1].nameAsset)];
+
+        }
+        else if (ListAssetUser.Count == 3)
+        {
+            gameObjectNoasset.SetActive(false);
+            gameObjectasset1.SetActive(true);
+            gameObjectasset2.SetActive(true);
+            gameObjectasset3.SetActive(true);
+
+            textNameAsset1.text = ListAssetUser[0].nameAsset;
+            textLinkImage1.text = ListAssetUser[0].urlImgAsset;
+            ImageItem1.sprite = ListImgAsset[getindexsprite(ListAssetUser[0].nameAsset)];
+
+            textNameAsset2.text = ListAssetUser[1].nameAsset;
+            textLinkImage2.text = ListAssetUser[1].urlImgAsset;
+            ImageItem2.sprite = ListImgAsset[getindexsprite(ListAssetUser[1].nameAsset)];
+
+            textNameAsset3.text = ListAssetUser[2].nameAsset;
+            textLinkImage3.text = ListAssetUser[2].urlImgAsset;
+            ImageItem3.sprite = ListImgAsset[getindexsprite(ListAssetUser[2].nameAsset)];
+
+        }
+        else { }
+
+
+
+    }
+    public int getindexsprite(string nameAccess)
+    {
+        if (nameAccess == "Sale30")
+        {
+            return 0;
+        }
+        else if (nameAccess == "Sale50")
+        {
+            return 1;
+        }
+        else if (nameAccess == "Sale70")
+        {
+            return 2;
+        }
+        return 0;
+        
     }
     public void OnButtonSaleClick()
     {
         // call sale post
-       string price = textInputPrice.text; 
-        PostDataRegisterUser(ListAssetUser[0].idAsset, price);
+    //   string price = textInputPrice.text; 
+      //  PostDataRegisterUser(ListAssetUser[0].idAsset, price);
     }
 
     IEnumerator PostDataRegisterUser(string idAsset, string price)
@@ -159,7 +250,7 @@ public class ListAssetSale : Singleton<ListAssetSale>
         // Check for errors
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
         {
-            Debug.Log("loi roi register Error");
+            Debug.Log("");
           
         }
         else

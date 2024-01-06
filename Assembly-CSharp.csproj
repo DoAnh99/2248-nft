@@ -60,6 +60,7 @@
     <Compile Include="Assets\_Assets\Script\loading\RecompensasDiarias.cs" />
     <Compile Include="Assets\_Assets\Script\Vibrator.cs" />
     <Compile Include="Assets\DailyRewards\Scripts\SimpleJSON\SimpleJSONBinary.cs" />
+    <Compile Include="Assets\_Assets\Script\NFT\ListAssetSale.cs" />
     <Compile Include="Assets\DailyRewards\Scripts\DailyRewardsCore.cs" />
     <Compile Include="Assets\_Assets\Script\loading\start.cs" />
     <Compile Include="Assets\_Assets\Script\VibrateController.cs" />
@@ -71,13 +72,16 @@
     <Compile Include="Assets\_Assets\Script\PanelRestart.cs" />
     <Compile Include="Assets\_Assets\Script\NFT\GameStatic.cs" />
     <Compile Include="Assets\_Assets\Script\DrawLine.cs" />
+    <Compile Include="Assets\_Assets\Script\loading\MoveBlock2.cs" />
     <Compile Include="Assets\_Assets\Script\loading\DaillyRewardController.cs" />
     <Compile Include="Assets\DailyRewards\Scripts\IntegrationTimedRewards.cs" />
     <Compile Include="Assets\_Assets\Script\PanelRewardFree.cs" />
     <Compile Include="Assets\_Assets\Script\PanelTextFX.cs" />
     <Compile Include="Assets\_Assets\Script\MiniGameScript\Game1Controller.cs" />
     <Compile Include="Assets\_Assets\Script\MiniGameScript\DataManagerMiniGame1.cs" />
+    <Compile Include="Assets\JSON\JSONObject.cs" />
     <Compile Include="Assets\DailyRewards\Scripts\CloudClock.cs" />
+    <Compile Include="Assets\JSON\VectorTemplates.cs" />
     <Compile Include="Assets\DailyRewards\Scripts\CloudClockBuilder.cs" />
     <Compile Include="Assets\_Assets\Script\FunctionBonus.cs" />
     <Compile Include="Assets\DailyRewards\Scripts\SimpleJSON\SimpleJSONUnity.cs" />
@@ -111,15 +115,13 @@
     <Compile Include="Assets\_Assets\Script\loading\tutorials1.cs" />
     <Compile Include="Assets\ver.cs" />
     <Compile Include="Assets\_Assets\Script\PanelClaimADS.cs" />
+    <Compile Include="Assets\_Assets\Script\NFT\ShowList.cs" />
     <Compile Include="Assets\_Assets\Script\Scale.cs" />
     <Compile Include="Assets\_Assets\Script\DataManager.cs" />
     <Compile Include="Assets\DailyRewards\Scripts\DailyRewards.cs" />
     <Compile Include="Assets\_Assets\Script\SpinWheel.cs" />
     <Compile Include="Assets\DailyRewards\Scripts\TimedRewards.cs" />
-    <Compile Include="Assets\JSON\VectorTemplates.cs" />
-    <Compile Include="Assets\JSON\JSONObject.cs" />
-    <Compile Include="Assets\_Assets\Script\NFT\ListAssetSale.cs" />
-    <Compile Include="Assets\_Assets\Script\NFT\ShowList.cs" />
+    <Compile Include="Assets\_Assets\Script\winscript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
